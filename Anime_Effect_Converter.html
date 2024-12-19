@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Effect Video Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .upload-section {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+        input[type="file"] {
+            display: block;
+            margin: 10px auto;
+        }
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        footer {
+            margin-top: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Anime Effect Video Converter</h1>
+    </header>
+    <div class="container">
+        <div class="upload-section">
+            <h2>Upload Your Video</h2>
+            <form id="uploadForm" action="#" method="POST" enctype="multipart/form-data">
+                <input type="file" name="video" accept="video/*" required>
+                <button type="submit">Convert to Anime</button>
+            </form>
+            <p id="message"></p>
+        </div>
+    </div>
+    <footer>
+        <p>Powered by Free AI Tools</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById("uploadForm");
+        const message = document.getElementById("message");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            message.textContent = "Processing your video... (This is a prototype)";
+            setTimeout(() => {
+                message.textContent = "Conversion complete! Download link will appear here.";
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
